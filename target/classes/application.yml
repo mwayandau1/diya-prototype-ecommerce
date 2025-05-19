@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecommercedb
+    username: postgres
+    password: Mos@21311
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# JWT Configuration
+jwt:
+  access-token:
+    secret: 8Zz5tw0Ionm3XPZZfN0NOml3z9FMfmpgXwovR9fp6ryDIoGRM8EPHAB6iHsc0fb
+    expiration-time: 3600000  # 1 hour in milliseconds
+  refresh-token:
+    secret: 9aK5tw1JQnm4YPZZfM1NOml4z9FNfmpgYwovS9gq7ryEIoGSN8FPHAB7iHsc1fc
+    expiration-time: 604800000  # 7 days in milliseconds
